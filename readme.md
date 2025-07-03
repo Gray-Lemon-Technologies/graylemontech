@@ -1,22 +1,25 @@
 # 🚀 GrayLemonTech WordPress Project - Local Setup Instructions
 
-This guide will help you and your team set up the **GrayLemonTech WordPress project** on your local machines, regardless of the development environment used (**Laragon, XAMPP, MAMP, LocalWP, Docker**).
+This guide will help you set up the **GrayLemonTech WordPress project** on your local machines, regardless of the development environment used (**Laragon, XAMPP, MAMP, LocalWP, Docker**).
 
 ---
 
-## ✅ Prerequisites
+## ✅ Installed Versions (Reference & Recommendation)
 
-Please ensure the following are installed:
+To ensure consistency across the team, the following versions were used to develop and test this project locally:
 
-| Requirement         | Version (Recommended)  |
-| ------------------- | ---------------------- |
-| PHP                 | 8.3.16 or higher       |
-| MySQL               | 8.4.3 or higher        |
-| Apache/Nginx        | Any compatible server  |
-| WordPress           | 6.x.x or latest stable |
-| Composer (optional) | Latest stable          |
+| Component    | Installed Version (Used) | Recommended Minimum Version |
+| ------------ | ------------------------ | --------------------------- |
+| PHP          | 8.3.16                   | 8.0 or higher               |
+| MySQL        | 8.4.3                    | 8.0 or higher               |
+| Apache/Nginx | Apache 2.4+              | Any compatible version      |
+| WordPress    | 6.x.x (latest stable)    | 6.0 or higher               |
+| Composer     | Latest Stable (optional) | Latest Stable               |
 
-*Any local server stack (Laragon, XAMPP, MAMP, LocalWP, Docker) may be used, as long as compatible versions are maintained.*
+👉 **Note:** Older versions such as **PHP 8.0** and **MySQL 8.0** should still work without major issues for this project. However, aligning with the versions above is recommended for compatibility and feature parity.
+
+📌 Check the official WordPress server requirements and PHP/MySQL compatibility here:
+[https://wordpress.org/about/requirements/](https://wordpress.org/about/requirements/](https://make.wordpress.org/hosting/handbook/compatibility/))
 
 ---
 
@@ -40,12 +43,8 @@ cd graylemontech
 
 ### 3. Create and Configure the Database
 
-* Create a new **MySQL database** (example: `graylemontech_db`).
+* Create a new **MySQL database** (example: `graylemontech_db or just graylemontech`).
 * Use **phpMyAdmin**, **Adminer**, or **command-line MySQL**.
-* Keep track of:
-
-  * Database name
-  * Database username & password
 
 ### 4. Configure WordPress
 
@@ -58,8 +57,6 @@ define( 'DB_USER', 'your_mysql_username' );
 define( 'DB_PASSWORD', 'your_mysql_password' );
 define( 'DB_HOST', 'localhost' );
 ```
-
-* Optional: Generate and insert unique security salts from [https://api.wordpress.org/secret-key/1.1/salt/](https://api.wordpress.org/secret-key/1.1/salt/)
 
 ### 5. Import the Database (If Provided)
 
@@ -115,19 +112,6 @@ git commit -m "Describe your changes here"
 ```bash
 git push origin main
 ```
-
----
-
-## ✅ Environment Notes & Version Consistency
-
-| Component | Required Version |
-| --------- | ---------------- |
-| PHP       | 8.3.16+          |
-| MySQL     | 8.4.3+           |
-| WordPress | Latest Stable    |
-
-* All teammates should align their environments to minimize compatibility issues.
-* Use `.env` files or local server settings to manage sensitive credentials.
 
 ---
 
