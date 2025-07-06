@@ -1,47 +1,28 @@
-# Ignore WordPress core (optional if managing with Composer or WP-CLI)
+# Ignore WordPress core
 wp-admin/
 wp-includes/
 
-# Ignore uploads (media should not be tracked)
-wp-content/uploads/
 
-# Ignore plugins except custom ones (if any)
-wp-content/plugins/*
-!wp-content/plugins/your-custom-plugin/
-
-# Ignore themes except your custom theme
-wp-content/themes/*
-!wp-content/themes/your-custom-theme/
-
-# Ignore language files (optional)
 wp-content/languages/
 
-# Ignore cache, logs, and temporary files
+# Ignore cache, logs, node_modules, OS files, etc.
 *.log
 *.tmp
 .cache/
 node_modules/
 vendor/
-
-# Ignore OS generated files
 .DS_Store
 Thumbs.db
 ehthumbs.db
 desktop.ini
-
-# Ignore IDE/editor settings
 .vscode/
 .idea/
 
-# Ignore environment files
+# Ignore environment configs and secrets
 .env
 .env.local
-
-# Ignore sensitive configuration (optional)
 wp-config.php
 .htaccess
 web.config
-
-# Composer & NPM related (if applicable)
 composer.lock
 package-lock.json
