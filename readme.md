@@ -108,6 +108,14 @@ This ensures that the site loads correctly on your machine.
 
 ---
 
+## ✅ Keeping the Team Updated
+
+* Code Changes: Always create your own branch, push your changes, and submit a Pull Request (PR).
+* The Project Manager will review the PR before merging it into the main branch.
+* Content/Admin Changes: Export and share the database .sql file when necessary.
+* For any missing media files (uploads, videos, logos), coordinate with the original developer or designer to ensure everyone has the same assets.
+
+
 ## ✅ Troubleshooting Guide
 
 | Issue                      | Solution                                                    |
@@ -117,12 +125,6 @@ This ensures that the site loads correctly on your machine.
 | Broken images or links     | Update `siteurl` and `home` in database `wp_options`.       |
 | Can't login to admin       | Verify database integrity or reset password via phpMyAdmin. |
 
----
-
-## ✅ Keeping the Team Updated
-
-* **Code Changes:** Commit and push custom theme/plugin files.
-* **Content/Admin Changes:** Export and share database `.sql` file when necessary.
 
 ---
 
