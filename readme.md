@@ -46,8 +46,7 @@ cd graylemontech
 * Since the repository **ignores WordPress core files** (`wp-admin/`, `wp-includes/`) to avoid bloating, you need to:
 
   1. Download WordPress from [https://wordpress.org/download/](https://wordpress.org/download/)
-  2. Extract and copy **everything except `wp-content`** into your project folder.
-  3. Keep the repository's `wp-content` folder intact.
+  2. Extract and copy **only these folders: `wp-admin` and `wp-includes`** into your project folder.
 
 ### 4. Create and Configure the Database
 
