@@ -1,9 +1,6 @@
-# Ignore WordPress core
 wp-admin/
 wp-includes/
 
-
-wp-content/languages/
 
 # Ignore cache, logs, node_modules, OS files, etc.
 *.log
