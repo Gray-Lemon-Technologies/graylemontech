@@ -16,7 +16,7 @@ To ensure consistency across the team, the following versions were used to devel
 | WordPress    | 6.x.x (latest stable)    | 6.0 or higher               |
 | Composer     | Latest Stable (optional) | Latest Stable               |
 
-📌 **Note:** Older versions such as **PHP 8.0** and **MySQL 8.0** should still work without major issues for this project. However, aligning with the versions above is recommended for compatibility and feature parity.
+📜 **Note:** Older versions such as **PHP 8.0** and **MySQL 8.0** should still work without major issues for this project. However, aligning with the versions above is recommended for compatibility and feature parity.
 
 📜 Check the official WordPress server requirements and PHP/MySQL compatibility here:
 [https://wordpress.org/about/requirements/](https://wordpress.org/about/requirements/)
@@ -68,13 +68,39 @@ define( 'DB_HOST', 'localhost' );
 
 ### 6. Import the Database (If Provided)
 
-*  `.sql` file will be provided by your backend developer, import it into your database:
+* `.sql` file will be provided by your backend developer; import it into your database:
 
 ```bash
 mysql -u your_mysql_username -p graylemontech_db < graylemontech.sql
 ```
 
-### 7. Access the WordPress Site
+### 7. Update Site URL in Database (Important)
+
+* After importing the database, open **phpMyAdmin** and navigate to the `wp_options` table.
+* Locate the fields:
+
+  * `siteurl`
+  * `home`
+* Update both values to match your local URL:
+
+  * Example for Laragon: `http://graylemontech.test`
+  * Example for XAMPP/MAMP: `http://localhost/graylemontech`
+
+This ensures that the site loads correctly on your machine.
+
+
+### 8. WordPress Admin Access Notes
+
+* The **WordPress admin usernames and passwords** are stored in the **database**.
+* To log in locally after importing the database:
+
+  1. Ask the **original owner or backend developer** for the **WordPress admin username and password**.
+  2. Alternatively, reset the admin password using **phpMyAdmin** if necessary.
+
+🔹 **Important:** Please request the current **WordPress admin username and password** from the original site owner or backend developer to ensure you can access the site after setup.
+
+
+### 9. Access the WordPress Site
 
 * Open your browser:
 
@@ -97,4 +123,8 @@ mysql -u your_mysql_username -p graylemontech_db < graylemontech.sql
 ## ✅ Keeping the Team Updated
 
 * **Code Changes:** Commit and push custom theme/plugin files.
-* **Content/Admin Changes:** Export database `.sql` file when necessary.
+* **Content/Admin Changes:** Export and share database `.sql` file when necessary.
+
+---
+
+For any setup issues, contact the project maintainer or team lead.
